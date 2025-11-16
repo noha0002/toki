@@ -1,0 +1,72 @@
+<header>
+  <div class="background-header">
+    <div class="menuBtn"></div>
+    <div class="sidebar">
+      <nav class="text">
+        <a href="/case">OUR CASES</a>
+        <a href="/strategy">OUR STRATEGY</a>
+        <a href="/family">OUR FAMILY</a>
+        <a href="/contacts">OUR CONTACTS</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<style>
+  .background-header {
+    position: relative;
+    width: 102%;
+    height: 15vh;
+    background-color: #bfbba8;
+    transform: translate(-0.5%, -10%);
+  }
+
+  .text a {
+    display: block;
+    margin-bottom: 0px;
+    margin-top: 40px;
+    text-decoration: none;
+    color: #594534;
+    font-size: 4vh;
+  }
+
+  .text a:hover {
+    text-decoration: underline;
+  }
+  .text {
+    padding-top: 60px;
+    padding-left: 5px;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0%;
+    right: -50%;
+    width: 450px;
+    height: 500px; /* kort sidebar */
+    background: rgba(242, 239, 233, 0.8);
+    padding: 20px;
+    transition: right 0.7s ease;
+    box-shadow: #908778 0px 0px 15px 3px;
+  }
+
+  .menuBtn:hover + .sidebar {
+    right: 0px;
+  }
+
+  .sidebar:hover {
+    right: 0px;
+  }
+
+  .menuBtn {
+    content: "";
+    width: 80px;
+    height: 40px;
+    background-color: #8c846c;
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    box-sizing: border-box;
+    border-radius: 1000px;
+  }
+</style>
