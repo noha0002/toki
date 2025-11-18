@@ -1,10 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ForsideCard from "../components/ForsideCard.astro";
+import image1 from "../assets/k.webp";
 ---
 
 <Layout>
   <h1>Index</h1>
+
+  <img src={image1} width={200} height={200} alt="My image" />
+
   <section class="intro-container">
     <h1>A HOUSE BUILT ON STORIES, IDENTITIES, AND IMPACT.</h1>
     <p>
@@ -43,8 +47,7 @@ import ForsideCard from "../components/ForsideCard.astro";
   }
 
   .intro-container {
-	width: 400px;
-	align-items: end;
-	margin: 4rem 2rem;
+    width: 400px;
+    margin-left: auto;
   }
 </style>
