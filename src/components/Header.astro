@@ -1,31 +1,38 @@
 <header>
-  <div class="background-header">
-    <div class="menuBtn"></div>
-    <div class="sidebar">
-      <nav class="text">
-        <a href="/case">OUR CASES</a>
-        <a href="/strategy">OUR STRATEGY</a>
-        <a href="/family">OUR FAMILY</a>
-        <a href="/contacts">OUR CONTACTS</a>
-      </nav>
-    </div>
-  </div>
+  <img src="" alt="logo" />
 </header>
+<button>X</button>
+<nav>
+  <a href="/">Home</a>
+  <a href="/case">OUR CASES</a>
+  <a href="/strategy">OUR STRATEGY</a>
+  <a href="/family">OUR FAMILY</a>
+  <a href="/contacts">OUR CONTACTS</a>
+</nav>
 
 <style>
   body,
   html {
     overflow-x: hidden;
   }
-  .background-header {
-    position: relative;
-    width: 102%;
-    height: 15vh;
-    background-color: #bfbba8;
-    transform: translate(-0.5%, -10%);
-  }
 
-  .text a {
+  header {
+    padding: 2rem;
+    background-color: #928e80;
+    position: fixed;
+    width: 100%;
+  }
+  nav {
+    position: fixed;
+    right: -25%;
+    top: 0;
+    background: rgba(242, 239, 233, 0.8);
+    padding-top: 60px;
+    padding-left: 5px;
+    transition: right 0.7s ease;
+    box-shadow: #908778 0px 0px 15px 3px;
+  }
+  a {
     display: block;
     margin-bottom: 0px;
     margin-top: 60px;
@@ -34,28 +41,20 @@
     font-size: 4vh;
   }
 
-  .text a:hover {
+  a:hover {
     text-decoration: underline;
   }
-  .text {
-    padding-top: 60px;
-    padding-left: 5px;
-  }
-
-  .sidebar {
+  button {
+    z-index: 10;
     position: fixed;
-    top: 0%;
-    right: -50%;
-    width: 450px;
-    height: 70vh;
-    background: rgba(242, 239, 233, 0.8);
-    padding: 20px;
-    transition: right 0.7s ease;
-    box-shadow: #908778 0px 0px 15px 3px;
+    top: 40px;
+    right: 40px;
+    border-radius: 50%;
+    border: none;
+    padding: 1rem;
   }
-
-  .menuBtn:hover + .sidebar {
-    right: 0px;
+  button:hover .sidebar {
+    right: 0;
   }
 
   .sidebar:hover {
@@ -74,3 +73,16 @@
     border-radius: 1000px;
   }
 </style>
+
+<script>
+  const button = document.querySelector("button");
+  const nav = document.querySelector("nav");
+
+  button.addEventListener("click", () => {
+    if (nav.style.right === "0px") {
+      nav.style.right = "-25%";
+    } else {
+      nav.style.right = "0px";
+    }
+  });
+</script>
