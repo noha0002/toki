@@ -1,12 +1,12 @@
 ---
-const { kategoriBeskrivelse, kategoriTitle } = Astro.props;
-import k from "../assets/k.webp";
+const { kategoriBeskrivelse, kategoriTitle, href } = Astro.props;
 ---
 
 <article>
-  <p>{kategoriBeskrivelse}</p>
-  <h3>{kategoriTitle}</h3>
-  <img src={k.src} width={1400} height={560} alt="My image" class="hover-img" />
+  <a href={href}>
+    <p>{kategoriBeskrivelse}</p>
+    <h3>{kategoriTitle}</h3>
+  </a>
 </article>
 
 <style>
@@ -14,10 +14,15 @@ import k from "../assets/k.webp";
     background-color: #f5f5f5;
     width: 370px;
     height: 70vh;
+  
+  }
+  article a {
+    text-decoration: none;
+    color: inherit;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+    height: 100%;
   }
   p {
     text-align: left;
@@ -35,20 +40,5 @@ import k from "../assets/k.webp";
     width: 5px;
     color: #594534;
     word-spacing: 0.8rem;
-  }
- 
-
-  .hover-img {
-    display: none; /* skjul som standard */
-    position: absolute; /* placér ovenpå kortet */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: 10;
-  }
-
-  .card:hover .hover-img {
-    display: block; /* vis ved hover */
   }
 </style>
