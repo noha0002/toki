@@ -22,6 +22,10 @@ body {
 }
 
 /* HERO */
+.flow-page {
+  padding-top: 80px;
+}
+
 .flow-hero {
   padding: 4rem 1.5rem 2rem;
 }
@@ -173,6 +177,27 @@ body {
 
 .flow-footer a:hover {
   text-decoration: underline;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Cuando entra en pantalla */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delays opcionales */
+.fade-delay-1 {
+  transition-delay: 0s; /* izquierda */
+}
+
+.fade-delay-2 {
+  transition-delay: 0.5s; /* derecha */
 }
 
 /* RESPONSIVE */
