@@ -1,0 +1,12 @@
+---
+const { number, text, reverse = false } = Astro.props;
+---
+
+<article class={`flow-step-card ${reverse ? "flow-step-card--reverse" : ""}`}>
+  <div class="flow-step-visual fade-in fade-delay-1"></div>
+
+  <div class="flow-step-content fade-in fade-delay-2">
+    <span class="flow-step-number">{number}.</span>
+    <p>{text}</p>
+  </div>
+</article>
