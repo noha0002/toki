@@ -24,11 +24,12 @@
   }
   nav {
     position: fixed;
-    right: -25%;
+    right: -50%;
     top: 0;
     background: rgba(242, 239, 233, 0.8);
     padding-top: 60px;
-    padding-left: 5px;
+    padding-bottom: 200px;
+    padding-left: 50px;
     transition: right 0.7s ease;
     box-shadow: #908778 0px 0px 15px 3px;
   }
@@ -36,6 +37,7 @@
     display: block;
     margin-bottom: 0px;
     margin-top: 60px;
+   padding-right: 200px;
     text-decoration: none;
     color: #594534;
     font-size: 4vh;
@@ -55,18 +57,6 @@
     border: none;
     padding: 1rem;
   }
-
-  .menuBtn {
-    content: "";
-    width: 80px;
-    height: 40px;
-    background-color: #8c846c;
-    position: fixed;
-    top: 40px;
-    right: 40px;
-    box-sizing: border-box;
-    border-radius: 1000px;
-  }
 </style>
 
 <script>
@@ -75,7 +65,7 @@
 
   button.addEventListener("click", () => {
     if (nav.style.right === "0px") {
-      nav.style.right = "-25%";
+      nav.style.right = "-50%";
     } else {
       nav.style.right = "0px";
     }
