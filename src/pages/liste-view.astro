@@ -1,0 +1,119 @@
+---
+import Layout from "../layouts/Layout.astro";
+import StrategyCard from "../components/StrategyCard.astro";
+import flower from "../assets/flower.png";
+---
+
+<Layout>
+  <section class="grid_12">
+    <div class="flower-img">
+      <img src={flower.src} width={1800} height={1300} alt="strategy card" />
+    </div>
+
+    <div class="margins">
+      <section class="toki">
+        <h2>At TÓKI We Work in Flow.</h2>
+
+        <p>With TÓKI Flow we create more than packaging - we create systems that work. Solutions that strengthen the brand, optimize the value chain and reduce the footprint.</p>
+        <p>When we think holistically from the start, packaging becomes a strategic tool - not a cost, but an opportunity. And when we do it together, partnership becomes momentum - From idea to impact.</p>
+        <button>EXPLORE FULL TÓKI FLOW</button>
+      </section>
+
+      <section>
+        <div class="strategi-tekst">
+          <h1>OUR STRATEGY</h1>
+          <p>TÓKI FLOW: FIVE PHASES, <br /> WHERE WE CREATE VALUE - TOGETHER</p>
+        </div>
+      </section>
+
+      <div class="strategylist-container">
+        <div>
+          <StrategyCard strategiTitle="First step – " strategiBeskrivelse="We start by understanding your reality" />
+        </div>
+
+        <div>
+          <StrategyCard strategiTitle="Second step – " strategiBeskrivelse="We shape your design DNA" />
+        </div>
+
+        <div>
+          <StrategyCard strategiTitle="Third step – " strategiBeskrivelse="We make ideas tangible" />
+        </div>
+
+        <div>
+          <StrategyCard strategiTitle="Fourth step – " strategiBeskrivelse="We make the solution ready for the world" />
+        </div>
+
+        <div>
+          <StrategyCard strategiTitle="Fifth step – " strategiBeskrivelse="We scale together" />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* LAYOUT*/
+
+  .grid_12 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .flower-img {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    margin-bottom: -4px;
+  }
+
+  .margins {
+    grid-column: 1/4;
+    grid-row: 1/3;
+  }
+
+  .strategylist-container {
+    display: flex;
+    gap: 5rem;
+    padding-top: 30px;
+    margin-left: 400px;
+  }
+
+  /*STYLE*/
+
+  .margins {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 100px;
+  }
+
+  h1 {
+    margin-top: 200px;
+  }
+
+  .toki {
+    padding-top: 100px;
+    padding-left: 100px;
+  }
+
+  .toki p {
+    width: 400px;
+    text-align: justify;
+  }
+
+  .toki button {
+    margin: 10px auto;
+    display: inline-block;
+  }
+
+  button {
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid #594534;
+    color: #594534;
+    background-color: white;
+  }
+
+  .strategi-tekst {
+    margin-left: 50px;
+  }
+</style>

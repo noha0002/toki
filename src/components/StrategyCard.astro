@@ -1,0 +1,29 @@
+---
+const { strategiTitle, strategiBeskrivelse } = Astro.props;
+import pic from "../assets/pic1.webp";
+---
+
+<article>
+  <div class="img-container">
+    <img class="point" src={pic.src} width={300} height={220} alt="strategy card" />
+  </div>
+  <p>
+    {strategiTitle}
+    <br />
+    {strategiBeskrivelse}
+  </p>
+</article>
+
+<style>
+  .point {
+    width: 300px;
+    height: 220px;
+    border-radius: 15px;
+    border-end-start-radius: 0px;
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-top: 0;
+    line-height: 1.5rem;
+  }
+</style>
