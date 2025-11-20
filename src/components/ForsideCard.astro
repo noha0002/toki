@@ -1,12 +1,12 @@
 ---
 const { kategoriBeskrivelse, kategoriTitle } = Astro.props;
-import k from "../assets/k.webp";
+
 ---
 
 <article>
   <p>{kategoriBeskrivelse}</p>
   <h3>{kategoriTitle}</h3>
-  <img src={k.src} width={1400} height={560} alt="My image" class="hover-img" />
+  
 </article>
 
 <style>
@@ -38,17 +38,5 @@ import k from "../assets/k.webp";
   }
  
 
-  .hover-img {
-    display: none; /* skjul som standard */
-    position: absolute; /* placér ovenpå kortet */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: 10;
-  }
 
-  .card:hover .hover-img {
-    display: block; /* vis ved hover */
-  }
 </style>
